@@ -1,0 +1,71 @@
+Cores:
+
+Cores seguras e cores "inseguras"
+
+RGB - Red/Green/Blue (cores primárias, só que com o verde no lugar do amarelo) - TELA
+CMYK - Cyan Magenta Yellow Black - IMPRESSORAS
+
+Sistema de cores no computador - RGB
+sistema de cores em impressoras - CMYK
+
+R  G  B
+
+
+VERMELHO =  FF0000
+VERDE    =  00FF00
+AZUL     =  0000FF
+CIANO    =  00FFFF
+MAGENTA  =  FF00FF
+AMARELO  =  FFFF00
+PRETO    =  000000 
+BRANCO   =  FFFFFF
+LARANJA  =  FF6600
+ROXO     =  AA1199
+CINZA    =  AAAAAA/C9C9C9
+
+R 00------------>FF
+G 00------------>FF
+B 00------------>FF
+
+AA1199 = A19 - cor segura
+
+
+.tx {
+background-color: #AA1199;
+}
+
+</style>
+</head>
+<body>
+<P class="tx"> parágrafo 1 </p> // com cor
+<p class="tx"> parágrafo 2 </p>// com cor
+<p> parágrafo 3 </p> // sem cor
+
+o que tiver .tx terá a cor de fundo.
+
+1- tag (todos)
+2- class (alguns)
+3- id (só 1)
+
+<p class="azol"> Este texto é <span style="color:#F00> azul </spam>, viu? </p>
+
+background-color: - cor do fundo
+color: - cor da fonte
+font-family: - família da fonte
+font-size: - tamanho da fonte
+font-weight: - peso da fonte (itálico, negrito, sublinhado)
+text-align - alinhamento do texto
+
+serif
+sans-serif (sem serifa)
+wonospace 
+
+body
+{
+background: url(image.jpg);
+}
+
+Semana que vem
+links com cores
+classe e id
+

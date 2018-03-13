@@ -1,0 +1,10 @@
+INDEX VERSION 1.129+C:\Users\Carolina\Desktop\USJT\3º Semestre\Práticas de Programação\Nova pasta\.metadata\.plugins\org.eclipse.jdt.core
+3943332437.index
+15595298.index
+71290822.index
+327786637.index
+3983404899.index
+466875476.index
+2710112417.index
+3762835041.index
+3651772555.index

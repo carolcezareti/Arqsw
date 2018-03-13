@@ -1,0 +1,179 @@
+<!doctype html>
+<title>Desenho Parabola</title>	
+<head>
+	<html lang="pt-br" />
+    <meta charset="UTF-8" />
+	<style type="text/css">
+	.inputPos {
+			position: absolute;
+			left: 100px;
+			
+			}
+	
+	</style>
+   
+<head/>
+<body onload="CanvasSpaceGame ()">
+	<h1>Utilize X e Y: velocidade, setas esquerda e direita: A, setas cima e baixo: B</h1>
+	<p id="PosiçãoXeY">ola</p>
+	<canvas width="600px" height="600px" id="CanvasTeste" style="border: 1px solid #000;"  />
+   
+	
+	
+	
+	
+	<script>
+    var c = document.getElementById("CanvasTeste");
+	var ctx = c.getContext("2d");
+	var w = c.width;
+	var h = c.height;
+	var back = new Image();
+		
+	var Xparabola = 100;
+	var XVxparabola = 50;
+	var XVyparabola = 100;
+	
+	var velocidade = 30;
+	
+	requestAnimationFrame(mexerBola);
+	
+		
+		
+	document.addEventListener('keydown', function(evt){
+	if(evt.keyCode==37){
+	a += 0.001;
+	}
+	if(evt.keyCode==39){
+	a -= 0.001;
+	}
+	if(evt.keyCode==38){
+	b += 0.1
+	}
+	if(evt.keyCode==40){
+	b -= 0.1
+	}
+	if(evt.keyCode==32){
+	distancia += 0.5;
+	}
+	if(evt.keyCode==88){velocidade+=1}
+	if(evt.keyCode==90){velocidade-=1}
+	
+	
+	});
+	
+			
+
+	//definimos o valor da origem do plano cartesiano	
+	var origemX = 40;
+	var origemY = 380;
+	
+	//indicamos os valores do ctx
+	var a = -0.005;
+	var b = 3;
+	var c = 0;
+			
+	//criamos para auxiliar nas contas
+	var delta;
+	var x1;
+	var x2;
+	var y;			
+			
+	var distancia = 0;
+			
+	//calculamos o delta 
+	delta = Math.pow(b,2) - 4 * a * c;
+			
+	//calculamos as raizes
+	x1 = (- b + Math.sqrt(delta)) / (2 * a);
+	x2 = (- b - Math.sqrt(delta)) / (2 * a);
+			
+	//atribuimos a primeira raiz encontrada .... acreditando que x1 < x2
+	distancia = x1;
+			
+		
+			
+			
+	
+	
+	
+	
+	function mexerBola() {
+		ctx.clearRect(0,0,w,h);
+		
+		
+		//ctx.moveTo(0,400);
+		//ctx.quadraticCurveTo(XVxparabola,XVyparabola,Xparabola,400);
+		//ctx.fill();
+		//ctx.stroke();
+		
+		//desenhando abcissa
+		ctx.beginPath();
+		ctx.moveTo(origemX,origemY); // x, y
+		ctx.lineTo(580, origemY);		
+
+		//desenhando coordenada
+		ctx.moveTo(40,380); // x, y
+		ctx.lineTo(40, 40);		
+
+		//exibe o conteúdo anterior na tela
+		ctx.stroke();	
+		ctx.fillStyle = "black";
+		//configuração de escrita de texto na tela
+		ctx.font="11px Arial";
+		ctx.fillText("valor delta: " + delta + "   valor x1: " + x1 + "   valor x2: "+ x2 + "   dist:" + distancia, 50, 50);
+		ctx.fillText(y,50,100);
+		
+		//laço irá desenhar todos os pontos contidos na função...um a um em 0.5 seg
+			
+			
+				
+				
+				ctx.beginPath();
+				
+				ctx.fillStyle = 'red';
+			
+				//queremos o valor de y em função de x (neste caso a distância)
+				y = a * (Math.pow(distancia,2)) + (b * distancia) + c;				
+				
+				//desenha uma espera exatamente no ponto x e y
+				
+				ctx.arc((distancia + 40) , (380 - y) , 5, 0.0 * Math.PI, 2.0 * Math.PI, false);
+
+				//(distancia + 40) -> + 40 por conta do início do eixo x (não começa em 0!)
+				//(380 - y) -> garantimos que o gráfico suba...considerando 380 o eixo y
+								
+				//desenha na tela 
+				ctx.fill();
+				
+				distancia += velocidade;
+				
+				if(y<=-20){
+				distancia=0;
+				}
+				
+				
+				
+			
+			
+	
+	
+		
+		
+		document.getElementById("PosiçãoXeY").innerHTML = a + " | " + b + " | " + c;
+		requestAnimationFrame(mexerBola);
+	}
+	
+	
+	
+	
+
+
+    
+    </script>
+	 
+    
+    
+    
+</body>
+<html        
+	

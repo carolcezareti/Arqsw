@@ -1,0 +1,4 @@
+home: menu, texto em jq
+contato: form ok
+produto: galeria ok
+sobre nós: foto, nome e ra ok

@@ -1,0 +1,80 @@
+public long maiorPopulacao (long populacao1, long populacao2, long populacao3, long populacao4, long populacao5) {
+	if (populacao1 >= populacao2){
+		if (populacao1 >= populacao3)
+			if (populacao1 >= populacao4)
+				if (populacao1 >= populacao5)
+					return populacao1;
+	}
+				else {
+					if (populacao2 >= populacao3)
+						if (populacao2 >= populacao4)
+							if (populacao2 >= populacao5)
+								return populacao2;
+					}
+							else {
+								if (populacao3 >= populacao4)
+									if (populacao3 >= populacao5)
+										return populacao3;
+									else (populacao4 >= populacao5)
+									return populacao4;
+							}
+					return populacao5;
+					
+							}
+
+public double menorArea (double area1, double area2, double area3, double area4, double area5) {
+	if (area1 <= area2){
+		if (area1 <= area3)
+			if (area1 <= area4)
+				if (area1 <= area5)
+					return area1;
+	}
+				else {
+					if (area2 <= area3)
+						if (area2 <= area4)
+							if (area2 <= area5)
+								return area2;
+					}
+							else {
+								if (area3 <= area4)
+									if (area3 <= area5)
+										return area3;
+									else (area4 <= area5);
+									return area4;
+							}
+					return area5;
+					
+							}
+private static String [] vetorPaises(String[] vetor) { 
+	String vet[] = new String[ 5 ]; 
+	return vet; } 
+
+}
+	}
+	
+}
+
+
+
+
+package dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConnectionFactory {
+	static {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public static Connection obtemConexao() throws SQLException {
+		return DriverManager
+				.getConnection("jdbc:mysql://localhost/vendas?user=alunos&password=alunos");
+	}
+
+}

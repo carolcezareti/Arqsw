@@ -1,0 +1,50 @@
+head - onde configura a página
+
+body - o que vai na página
+
+title - nome que vai na aba da página
+
+meta tags - tags que configuram a página. 
+<meta charset="utf-8"/>
+
+<h1> - texto grande
+<h2> - texto menor
+quanto maior o "h" menor a letra.
+
+<p> .... </p> texto normal
+<p align="center/left/right/justifeid"> ...... </p> - texto centralizado
+<p style="text-align:center"> - texto centralizado (fazer deste jeito)
+
+
+<br> quebra de linha
+
+colocar imagem:
+<img src="imagem.jpg" alt="imagem" ou title="imagem"/> 
+<a - link
+href - pra onde vc quer que esa página te mande
+<a href contato.html> "www.google.com" </a>
+<a href="http://www.uol.com.br"> Site do UOL </a>
+<a href="contato.html" target="blank/self/top/palent"> ..... </a> - abrir em outra aba
+
+width="200px" - largura
+height="100px" - altura
+
+Ordem:
+- html
+- head
+- css
+- body
+- javascript
+
+site: www.lipsum.com
+
+
+Fazer uma página que contenha uma imagem, o titulo da mísica e as estrofes
+embaixo, 2 links: site da banda (abre outra janela), site dos integrantes (com fotos).
+Integrantes da banda x
+integrante e nome
+botão de voltar.
+
+foto
+nome da musica
+estrofes

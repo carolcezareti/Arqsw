@@ -1,0 +1,20 @@
+classe = identifica pelo ponto (.)
+id = identifica pelo #
+todos = p
+
+cima, equerda, baixo, direita.
+
+line height: espaçamento entre as linhas;
+border width - largura da borda
+
+cores: 0 = escuro
+       f = claro
+
+padding = espaçamento/respiro (tipo uma margem)
+
+border radius - deixa a borda redonda
+
+imagem de fundo
+formatação de texto/linha
+
+a href
